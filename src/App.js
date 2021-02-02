@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import jeopardy from './components/jeopardy/Jeopardy';
+import Welcome from './components/welcome/Welcome';
+import Clock from './components/clock/Clock'
+import Contact from './components/contact/contact';
+import Navigation from "./components/navigation/Navigation";
+import NoMatch from './components/NoMatch/NoMatch';
+import { Route, Switch } from 'react-router-dom';
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Navigation />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={(props) => <Welcome {...props} name='Gaytri' />}
+          />
+          <Route path="/clock" component={Clock} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/welcome/:name" Component={Welcome} />
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
+      </div>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    );
+  }
 }
-
 export default App;

@@ -25,16 +25,19 @@ class Jeopardy extends Component {
   }
   //display the results on the screen
   render() {
+    if (this.state.data.id){
+      return (
+        <div>
+loded
+        </div>
+      )
+        
+      
+    }
     return (
       <div>
         {console.log(this.state.data)}
-        if (this.state.data.id) {
-          return (
-            <div>
-              stuff here
-            </div>
-          );
-        }
+       
         return (
           <div>
           <h3>Losding</h3>

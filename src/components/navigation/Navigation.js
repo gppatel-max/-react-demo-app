@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, link } from 'react-router-dom';
 
 
+
 function Navigation(props) {
     return (
         <ul>
@@ -13,6 +14,9 @@ function Navigation(props) {
             </li>
             <li>
                 <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+                <Link to="/jeopardy">Jeopardy</Link>
             </li>
         </ul>
     );

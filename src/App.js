@@ -7,6 +7,7 @@ import Contact from './components/contact/contact';
 import Navigation from "./components/navigation/Navigation";
 import NoMatch from './components/NoMatch/NoMatch';
 import { Route, Switch } from 'react-router-dom';
+import Jeopardy from './components/jeopardy/Jeopardy';
 class App extends Component {
   render() {
     return (
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path="/clock" component={Clock} />
           <Route path="/contact" component={Contact} />
           <Route path="/welcome/:name" Component={Welcome} />
+          <Route path="/jeopardy" component={Jeopardy} />
           <Route>
             <NoMatch />
           </Route>
